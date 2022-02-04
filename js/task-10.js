@@ -18,19 +18,19 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+let basicSize = 30;
+
 function createBoxes(amount) {
-  let basicSize = 20;
-  let createDivEl = document.createElement("div");
-  
   for (let i = 0; i < amount; i += 1) {
-    basicSize += 10;
-    createDivEl = document.createElement("div");
+    
+    let createDivEl = document.createElement("div");
     
     createDivEl.style.cssText = 
      `width: ${basicSize}px; 
       height: ${basicSize}px;
       background-color: ${getRandomHexColor()}`;
     
+    basicSize += 10
     boxesEl.appendChild(createDivEl);
   }
 }
